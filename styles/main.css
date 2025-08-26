@@ -1,0 +1,332 @@
+/* 메인 CSS 스타일 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #333;
+}
+
+#gameContainer {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    max-width: 900px;
+    width: 100%;
+}
+
+/* 화면 전환 */
+.screen {
+    display: none;
+    padding: 40px;
+    text-align: center;
+    min-height: 600px;
+}
+
+.screen.active {
+    display: block;
+}
+
+.screen.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* 메인 메뉴 */
+#mainMenu h1 {
+    font-size: 3.5rem;
+    margin-bottom: 40px;
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.menu-buttons {
+    margin: 40px 0;
+}
+
+.btn {
+    padding: 15px 30px;
+    margin: 10px;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-primary {
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    color: white;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+}
+
+.btn-secondary {
+    background: linear-gradient(45deg, #f093fb, #f5576c);
+    color: white;
+    box-shadow: 0 4px 15px rgba(240, 147, 251, 0.4);
+}
+
+.btn-secondary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(240, 147, 251, 0.6);
+}
+
+.btn-small {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    margin: 5px;
+}
+
+.game-info {
+    margin-top: 40px;
+    color: #666;
+    line-height: 1.6;
+}
+
+.game-info p {
+    margin: 10px 0;
+}
+
+/* 게임 화면 */
+#gameScreen {
+    padding: 20px;
+}
+
+.game-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 15px;
+    background: linear-gradient(45deg, #f8f9fa, #e9ecef);
+    border-radius: 15px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.score-info, .lives-info {
+    display: flex;
+    gap: 20px;
+    font-weight: bold;
+    color: #495057;
+}
+
+.score-info span, .lives-info span {
+    background: white;
+    padding: 8px 15px;
+    border-radius: 25px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#gameCanvas {
+    border: 3px solid #667eea;
+    border-radius: 15px;
+    background: #f8f9fa;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    display: block;
+    margin: 0 auto;
+}
+
+.game-controls {
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* 일시정지 화면 */
+.pause-content, .gameover-content {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.pause-content h2, .gameover-content h2 {
+    margin-bottom: 30px;
+    color: #495057;
+}
+
+.final-score {
+    margin: 30px 0;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 15px;
+}
+
+.final-score p {
+    margin: 10px 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.gameover-buttons {
+    margin-top: 30px;
+}
+
+/* 하이스코어 화면 */
+#highScoreScreen h2 {
+    margin-bottom: 30px;
+    color: #495057;
+}
+
+.high-score-list {
+    margin: 30px 0;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.high-score-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    margin: 10px 0;
+    background: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.high-score-rank {
+    font-weight: bold;
+    color: #667eea;
+    min-width: 50px;
+}
+
+.high-score-name {
+    flex: 1;
+    text-align: left;
+    margin-left: 20px;
+}
+
+.high-score-value {
+    font-weight: bold;
+    color: #28a745;
+    min-width: 100px;
+    text-align: right;
+}
+
+/* 설정 화면 */
+#settingsScreen h2 {
+    margin-bottom: 30px;
+    color: #495057;
+}
+
+.settings-content {
+    margin: 30px 0;
+    text-align: left;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.setting-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 10px;
+}
+
+.setting-item label {
+    font-weight: bold;
+    color: #495057;
+    min-width: 120px;
+}
+
+.setting-item input, .setting-item select {
+    padding: 8px 12px;
+    border: 2px solid #dee2e6;
+    border-radius: 8px;
+    font-size: 1rem;
+    background: white;
+}
+
+.setting-item input:focus, .setting-item select:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+#volumeValue {
+    min-width: 50px;
+    text-align: center;
+    font-weight: bold;
+    color: #667eea;
+}
+
+/* 애니메이션 */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.screen.active {
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+    #gameContainer {
+        margin: 20px;
+        border-radius: 15px;
+    }
+    
+    .screen {
+        padding: 20px;
+        min-height: 500px;
+    }
+    
+    #mainMenu h1 {
+        font-size: 2.5rem;
+    }
+    
+    .btn {
+        padding: 12px 24px;
+        font-size: 1rem;
+        margin: 8px;
+    }
+    
+    #gameCanvas {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+    }
+    
+    .game-header {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .score-info, .lives-info {
+        gap: 15px;
+    }
+}

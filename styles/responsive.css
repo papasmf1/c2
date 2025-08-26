@@ -1,0 +1,462 @@
+/* 반응형 CSS 스타일 */
+
+/* 태블릿 (768px - 1024px) */
+@media (max-width: 1024px) and (min-width: 769px) {
+    #gameContainer {
+        max-width: 800px;
+        margin: 20px;
+    }
+    
+    .screen {
+        padding: 30px;
+        min-height: 550px;
+    }
+    
+    #mainMenu h1 {
+        font-size: 3rem;
+    }
+    
+    #gameCanvas {
+        width: 700px;
+        height: 525px;
+    }
+    
+    .game-header {
+        padding: 12px;
+    }
+    
+    .score-info, .lives-info {
+        gap: 15px;
+        font-size: 0.9rem;
+    }
+    
+    .btn {
+        padding: 12px 25px;
+        font-size: 1rem;
+    }
+}
+
+/* 모바일 (768px 이하) */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+    
+    #gameContainer {
+        margin: 10px;
+        border-radius: 15px;
+        max-width: 100%;
+    }
+    
+    .screen {
+        padding: 20px 15px;
+        min-height: 500px;
+    }
+    
+    #mainMenu h1 {
+        font-size: 2.5rem;
+        margin-bottom: 30px;
+    }
+    
+    .menu-buttons {
+        margin: 30px 0;
+    }
+    
+    .btn {
+        padding: 12px 20px;
+        font-size: 0.9rem;
+        margin: 8px 5px;
+        width: 100%;
+        max-width: 250px;
+    }
+    
+    .game-info {
+        margin-top: 30px;
+        font-size: 0.9rem;
+    }
+    
+    #gameCanvas {
+        width: 100%;
+        max-width: 350px;
+        height: auto;
+        aspect-ratio: 4/3;
+        border-width: 2px;
+    }
+    
+    .game-header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 12px;
+        margin-bottom: 15px;
+    }
+    
+    .score-info, .lives-info {
+        gap: 15px;
+        font-size: 0.8rem;
+        justify-content: center;
+    }
+    
+    .score-info span, .lives-info span {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+    }
+    
+    .game-controls {
+        margin-top: 15px;
+    }
+    
+    .btn-small {
+        padding: 8px 16px;
+        font-size: 0.8rem;
+        margin: 5px;
+    }
+    
+    /* 일시정지 및 게임오버 화면 */
+    .pause-content, .gameover-content {
+        padding: 25px;
+        margin: 20px;
+        max-width: 90%;
+    }
+    
+    .pause-content h2, .gameover-content h2 {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+    
+    .final-score {
+        margin: 20px 0;
+        padding: 15px;
+    }
+    
+    .final-score p {
+        font-size: 1rem;
+        margin: 8px 0;
+    }
+    
+    /* 하이스코어 화면 */
+    #highScoreScreen h2 {
+        font-size: 1.8rem;
+        margin-bottom: 25px;
+    }
+    
+    .high-score-list {
+        margin: 25px 0;
+        max-height: 300px;
+    }
+    
+    .high-score-item {
+        padding: 12px;
+        margin: 8px 0;
+        font-size: 0.9rem;
+    }
+    
+    .high-score-rank {
+        min-width: 40px;
+        font-size: 0.8rem;
+    }
+    
+    .high-score-name {
+        margin-left: 15px;
+        font-size: 0.9rem;
+    }
+    
+    .high-score-value {
+        min-width: 80px;
+        font-size: 0.9rem;
+    }
+    
+    /* 설정 화면 */
+    #settingsScreen h2 {
+        font-size: 1.8rem;
+        margin-bottom: 25px;
+    }
+    
+    .settings-content {
+        margin: 25px 0;
+        max-width: 100%;
+    }
+    
+    .setting-item {
+        margin: 15px 0;
+        padding: 12px;
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+    
+    .setting-item label {
+        min-width: auto;
+        font-size: 0.9rem;
+    }
+    
+    .setting-item input, .setting-item select {
+        padding: 10px;
+        font-size: 0.9rem;
+        width: 100%;
+        max-width: 200px;
+    }
+    
+    #volumeValue {
+        min-width: auto;
+        font-size: 0.9rem;
+    }
+}
+
+/* 작은 모바일 (480px 이하) */
+@media (max-width: 480px) {
+    .screen {
+        padding: 15px 10px;
+        min-height: 450px;
+    }
+    
+    #mainMenu h1 {
+        font-size: 2rem;
+        margin-bottom: 25px;
+    }
+    
+    .menu-buttons {
+        margin: 25px 0;
+    }
+    
+    .btn {
+        padding: 10px 18px;
+        font-size: 0.85rem;
+        margin: 6px 3px;
+    }
+    
+    .game-info {
+        margin-top: 25px;
+        font-size: 0.85rem;
+    }
+    
+    .game-info p {
+        margin: 8px 0;
+    }
+    
+    #gameCanvas {
+        max-width: 300px;
+    }
+    
+    .game-header {
+        padding: 10px;
+        gap: 12px;
+    }
+    
+    .score-info, .lives-info {
+        gap: 12px;
+        font-size: 0.75rem;
+    }
+    
+    .score-info span, .lives-info span {
+        padding: 5px 10px;
+        font-size: 0.75rem;
+    }
+    
+    .pause-content, .gameover-content {
+        padding: 20px;
+        margin: 15px;
+    }
+    
+    .pause-content h2, .gameover-content h2 {
+        font-size: 1.3rem;
+        margin-bottom: 18px;
+    }
+    
+    .final-score {
+        margin: 18px 0;
+        padding: 12px;
+    }
+    
+    .final-score p {
+        font-size: 0.9rem;
+        margin: 6px 0;
+    }
+    
+    #highScoreScreen h2 {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+    
+    .high-score-list {
+        margin: 20px 0;
+        max-height: 250px;
+    }
+    
+    .high-score-item {
+        padding: 10px;
+        margin: 6px 0;
+        font-size: 0.8rem;
+    }
+    
+    .high-score-rank {
+        min-width: 35px;
+        font-size: 0.75rem;
+    }
+    
+    .high-score-name {
+        margin-left: 12px;
+        font-size: 0.8rem;
+    }
+    
+    .high-score-value {
+        min-width: 70px;
+        font-size: 0.8rem;
+    }
+    
+    #settingsScreen h2 {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+    
+    .settings-content {
+        margin: 20px 0;
+    }
+    
+    .setting-item {
+        margin: 12px 0;
+        padding: 10px;
+        gap: 8px;
+    }
+    
+    .setting-item label {
+        font-size: 0.85rem;
+    }
+    
+    .setting-item input, .setting-item select {
+        padding: 8px;
+        font-size: 0.85rem;
+        max-width: 180px;
+    }
+    
+    #volumeValue {
+        font-size: 0.85rem;
+    }
+}
+
+/* 가로 모드 (landscape) 모바일 */
+@media (max-height: 500px) and (orientation: landscape) {
+    #gameContainer {
+        margin: 10px;
+        max-height: 95vh;
+    }
+    
+    .screen {
+        padding: 15px;
+        min-height: auto;
+    }
+    
+    #mainMenu h1 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+    
+    .menu-buttons {
+        margin: 20px 0;
+    }
+    
+    .btn {
+        padding: 8px 16px;
+        font-size: 0.8rem;
+        margin: 5px;
+    }
+    
+    .game-info {
+        margin-top: 20px;
+        font-size: 0.8rem;
+    }
+    
+    #gameCanvas {
+        max-width: 400px;
+        max-height: 250px;
+    }
+    
+    .game-header {
+        padding: 8px;
+        margin-bottom: 10px;
+        gap: 10px;
+    }
+    
+    .score-info, .lives-info {
+        gap: 10px;
+        font-size: 0.75rem;
+    }
+    
+    .score-info span, .lives-info span {
+        padding: 4px 8px;
+        font-size: 0.75rem;
+    }
+}
+
+/* 고해상도 디스플레이 (Retina 등) */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    #gameCanvas {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+    }
+    
+    .btn {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+}
+
+/* 접근성 개선 */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* 다크 모드 지원 */
+@media (prefers-color-scheme: dark) {
+    body {
+        background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+    }
+    
+    #gameContainer {
+        background: rgba(44, 62, 80, 0.95);
+        color: #ecf0f1;
+    }
+    
+    .screen {
+        color: #ecf0f1;
+    }
+    
+    .game-header {
+        background: linear-gradient(45deg, #34495e, #2c3e50);
+        color: #ecf0f1;
+    }
+    
+    .score-info span, .lives-info span {
+        background: #34495e;
+        color: #ecf0f1;
+    }
+    
+    .pause-content, .gameover-content {
+        background: #34495e;
+        color: #ecf0f1;
+    }
+    
+    .final-score {
+        background: #2c3e50;
+        color: #ecf0f1;
+    }
+    
+    .high-score-item {
+        background: #34495e;
+        color: #ecf0f1;
+    }
+    
+    .setting-item {
+        background: #34495e;
+        color: #ecf0f1;
+    }
+    
+    .setting-item input, .setting-item select {
+        background: #2c3e50;
+        color: #ecf0f1;
+        border-color: #7f8c8d;
+    }
+}
